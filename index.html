@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/x-icon" href="invwordlogo2.png">
+    <link rel="icon" type="image/x-icon" href="invwordlogo4.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Invisible Wordle</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body onload="onPageLoad();">
     <div id="gameContainer">
+        <div id="mainTitle">invisible wordle</div>
         <div id="mainGrid">
             <div class="gridRow" id="gridRowOne">
                 <div class="gridItem" id="gridOneOne"></div>
@@ -55,7 +59,7 @@
             </div>
         </div>
         <div id="submitContainer">
-            <input id="submitInput">
+            <input id="submitInput" onkeydown="search(this)" placeholder="type here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'type here'">
             <button type="button" id="submitButton" onclick="submitFunction()">go</button>
         </div>
         <div id="notifText">Guess must be 5 characters long.</div>
