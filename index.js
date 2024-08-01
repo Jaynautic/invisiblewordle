@@ -1,24 +1,7 @@
 const answerList = [
-    "carts",
-    "money",
-    "again",
-    "which",
-    "there",
-    "their",
-    "about",
-    "would",
-    "these",
-    "other",
-    "words",
-    "could",
-    "write",
-    "first",
-    "water",
-    "after",
-    "where",
-    "right",
-    "think"
+    "carts","money","again","which","there","their","about","would","these","other","words","could","write","first","water","after","where","right","think"
 ];
+
 const gridId = [
     ["gridOneOne",
         "gridOneTwo",
@@ -90,6 +73,12 @@ function submitFunction() {
     }
 
     document.getElementById("submitInput").value = "";
+}
+
+function search(ele) {
+    if(event.key === 'Enter') {
+        submitFunction();
+    }
 }
 
 // https://www-cs-faculty.stanford.edu/~knuth/sgb-words.txt
